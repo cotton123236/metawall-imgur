@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "a5c428f5-750c-49dd-a1ce-2e9705e1f011",
+		"name": "metawall - imgur - heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19678610"
+	},
+	"item": [
+		{
+			"name": "image upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTA1YmEyYTQ2ODBkMmZiM2QxN2Q3OSIsImlhdCI6MTY1NDg2NjQ0NSwiZXhwIjoxNjU1NDcxMjQ1fQ.zI-WYNtuL5D4MHwqV3kCwgndvCAlDxnNovLMUnD0P20",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/upload",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/users",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user profile by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTA1YmEyYTQ2ODBkMmZiM2QxN2Q3OSIsImlhdCI6MTY1NDY3NjgyNywiZXhwIjoxNjU1MjgxNjI3fQ.cS6m2SAZv9CjUq_wmMAYDrI499OWV64Y3QuPok9AzCY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/users/profile/62a05ba2a4680d2fb3d17d79",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile",
+						"62a05ba2a4680d2fb3d17d79"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update profile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTA1YmEyYTQ2ODBkMmZiM2QxN2Q3OSIsImlhdCI6MTY1NDY3NjgyNywiZXhwIjoxNjU1MjgxNjI3fQ.cS6m2SAZv9CjUq_wmMAYDrI499OWV64Y3QuPok9AzCY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"一尾\",\r\n    \"gender\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"一尾3.0\",\r\n    \"email\": \"cotton12323678@gmail.com\",\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"cotton123236@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user update password",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOWYyMTk3M2Y1NWUyNDA0Y2QwOTY5ZiIsImlhdCI6MTY1NDY3MzEwNSwiZXhwIjoxNjU1Mjc3OTA1fQ.EDps8ylOTXotHirpiBRpGK9Kn_xeIZOFL1hoOX7ze7M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"12345678\",\r\n    \"confirmPassword\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/users/password",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get post by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/posts/628b98a182b47fa8c8aad5d5",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"628b98a182b47fa8c8aad5d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post one or many",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"626e91ea36674e3b1cdd704b\",\r\n    \"content\": \"黎明之前 黑夜無眠<br>悄悄地靜止了時間<br>攤開所有 的是與非<br>面對自己 和解\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all posts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete one post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/posts/6279bb397c36f9f09178add1",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"6279bb397c36f9f09178add1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch one post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"晴朗的天空 我們都迷過路<br>下雨的天空 想辦法找去處<br>草叢裡有人 別停下腳步\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://salty-oasis-69735.herokuapp.com/api/posts/62792e681d0b22d988679114",
+					"protocol": "https",
+					"host": [
+						"salty-oasis-69735",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"62792e681d0b22d988679114"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
