@@ -11,7 +11,7 @@ const {
   IMGUR_CLIENT_ID,
   IMGUR_CLIENT_SECRET,
   IMGUR_REFRESH_TOKEN,
-  IMGUR_ALBUN_ID
+  IMGUR_ALBUM_ID
 } = process.env
 
 const uploadImage = captureError(async (req, res, next) => {
@@ -34,7 +34,7 @@ const uploadImage = captureError(async (req, res, next) => {
   const response = await client.upload({
     image: files[0].buffer.toString('base64'),
     type: 'base64',
-    album: IMGUR_ALBUN_ID
+    album: IMGUR_ALBUM_ID
   })
   success(res, response.data.link)
 })
